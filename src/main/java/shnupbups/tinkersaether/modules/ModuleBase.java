@@ -119,6 +119,7 @@ public class ModuleBase {
             zanite.addItem("blockZanite", 1, Material.VALUE_Block);
             zanite.addTrait(Zany.zany, MaterialTypes.HEAD);
             zanite.addTrait(jagged, MaterialTypes.HEAD);
+            zanite.addTrait(Gilded.gilded, MaterialTypes.HEAD);
             zanite.addTrait(jagged);
             MaterialIntegration zaniteMi = new MaterialIntegration(zanite).setRepresentativeItem("gemZanite");
             TinkerRegistry.integrate(zaniteMi).preInit();
