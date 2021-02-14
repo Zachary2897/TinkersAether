@@ -1,7 +1,6 @@
 {
     "pack": {
-        "description": "tinkersaether resources",
-        "pack_format": 3,
-        "_comment": ""
+        "description": "Tinkers' Aether",
+        "pack_format": 3
     }
 }

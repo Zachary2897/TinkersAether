@@ -1,6 +1,6 @@
-# Tinker's Aether
+# Tinkers' Aether
 
-Tinker's Aether is an addon for Tinker's Construct which adds support for materials from Aether Legacy.
+This is a fork of Tinkers' Aether by Shnupbups, which is an addon for Tinkers' Construct that adds support for materials from The Aether.
 
 ## Materials
 Current tool materials include:
@@ -18,7 +18,7 @@ Current tool materials include:
   <li>Golden Aercloud (as of 1.1.2)</li>
   <li>Icestone (as of 1.2.0)</li>
 </ul>
-Each of these that have corresponding tools in Aether Legacy have traits somewhat equivalent to the abilities already existent in those.
+Each of these that have corresponding tools in The Aether have traits somewhat equivalent to the abilities already existent in those.
 
 Current fletching materials include:
 <ul>
@@ -31,13 +31,9 @@ Current fletching materials include:
 Materials can be individually disabled in the config as of Version 1.0.2.
 
 ## Dart Shooter
-Currently the mod only adds one new tool, the Dart Shooter. The Dart Shooter acts much like its counterpart from Aether Legacy, and can shoot all of its darts.
+Currently the mod only adds one new tool, the Dart Shooter. The Dart Shooter acts much like its counterpart from The Aether, and can shoot all of its darts.
 
 #### Darts
-In addition, you can make custom darts much the same you would make other ammunition items in Tinker's Construct, and these can also be fired from Tinker's Dart Shooters.
+In addition, you can make custom darts much the same you would make other ammunition items in Tinkers' Construct, and these can also be fired from Tinkers' Dart Shooters.
 
 Both Darts and Dart shooters can be disabled entirely in the config as of Version 1.0.2.
-
-## Future Additions
-I would like to add Valkyrie Metal to Silver Dungeon loot, but cannot currently as Aether Legacy does not support adding or editing dungeon loot.<br>
-I would like to add support for Construct's Armory as well, with the ability to make Gloves.
