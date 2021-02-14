@@ -1,4 +1,4 @@
-# Tinkers' Aether
+# Tinkers' Aether: ZackPack Edition
 
 This is a fork of Tinkers' Aether by Shnupbups, which is an addon for Tinkers' Construct that adds support for materials from The Aether.
 
