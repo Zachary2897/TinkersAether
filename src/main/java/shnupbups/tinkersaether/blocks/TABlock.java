@@ -13,7 +13,7 @@ public class TABlock extends Block {
 
     public TABlock(String name, Material material) {
         super(material);
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
         this.setRegistryName(TinkersAether.modid, name);
         this.setCreativeTab(AetherCreativeTabs.blocks);
     }

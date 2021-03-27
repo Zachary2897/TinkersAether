@@ -344,7 +344,7 @@ public class ModuleBase {
         if(TAConfig.valkyrie) {
             registry.register(valkyrieIngot);
             registry.register(valkyrieNugget);
-            Item valkBlock = new ItemBlock(valkyrieBlock).setRegistryName(valkyrieBlock.getRegistryName()).setUnlocalizedName(valkyrieBlock.getUnlocalizedName());
+            Item valkBlock = new ItemBlock(valkyrieBlock).setRegistryName(valkyrieBlock.getRegistryName()).setTranslationKey(valkyrieBlock.getTranslationKey());
             registry.register(valkBlock);
             TinkersAether.proxy.registerItemRenderer(valkyrieIngot, 0, "valkyrie_ingot");
             TinkersAether.proxy.registerItemRenderer(valkyrieNugget, 0, "valkyrie_nugget");

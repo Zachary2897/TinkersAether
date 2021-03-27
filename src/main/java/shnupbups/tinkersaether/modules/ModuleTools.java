@@ -45,21 +45,21 @@ public class ModuleTools {
 
         if(TAConfig.darts) {
             mouthpiece = new ToolPart(Material.VALUE_Ingot);
-            mouthpiece.setUnlocalizedName("mouthpiece").setRegistryName("mouthpiece");
+            mouthpiece.setTranslationKey("mouthpiece").setRegistryName("mouthpiece");
             event.getRegistry().register(mouthpiece);
             TinkerRegistry.registerToolPart(mouthpiece);
             TinkersAether.proxy.registerToolPartModel(mouthpiece);
             parts.add(mouthpiece);
 
             tube = new ToolPart(Material.VALUE_Ingot * 3);
-            tube.setUnlocalizedName("tube").setRegistryName("tube");
+            tube.setTranslationKey("tube").setRegistryName("tube");
             event.getRegistry().register(tube);
             TinkerRegistry.registerToolPart(tube);
             TinkersAether.proxy.registerToolPartModel(tube);
             parts.add(tube);
 
             dartTip = new ToolPart(Material.VALUE_Ingot);
-            dartTip.setUnlocalizedName("dart_tip").setRegistryName("dart_tip");
+            dartTip.setTranslationKey("dart_tip").setRegistryName("dart_tip");
             event.getRegistry().register(dartTip);
             TinkerRegistry.registerToolPart(dartTip);
             TinkersAether.proxy.registerToolPartModel(dartTip);

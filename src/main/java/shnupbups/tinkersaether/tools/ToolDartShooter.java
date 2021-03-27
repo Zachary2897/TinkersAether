@@ -31,7 +31,7 @@ public class ToolDartShooter extends BowCore {
         super(PartMaterialType.bow(ModuleTools.tube),
                 PartMaterialType.extra(ModuleTools.mouthpiece));
 
-        this.setUnlocalizedName("dart_shooter").setRegistryName("dart_shooter");
+        this.setTranslationKey("dart_shooter").setRegistryName("dart_shooter");
     }
 
     @Override

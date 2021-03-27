@@ -28,7 +28,7 @@ public class ToolDart extends ProjectileCore {
 
         addCategory(Category.NO_MELEE, Category.PROJECTILE);
 
-        this.setUnlocalizedName("dart").setRegistryName("dart");
+        this.setTranslationKey("dart").setRegistryName("dart");
     }
 
     @Override

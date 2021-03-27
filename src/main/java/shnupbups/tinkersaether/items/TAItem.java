@@ -11,7 +11,7 @@ public class TAItem extends Item {
 
     public TAItem(String name) {
         super();
-        this.setUnlocalizedName(name);
+        this.setTranslationKey(name);
         this.setRegistryName(TinkersAether.modid, name);
         this.setCreativeTab(AetherCreativeTabs.material);
     }
