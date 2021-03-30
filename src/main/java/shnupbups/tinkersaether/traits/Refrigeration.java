@@ -16,8 +16,8 @@ public class Refrigeration extends TATrait {
 	@Override
 	public void blockHarvestDrops(ItemStack tool, BlockEvent.HarvestDropsEvent event) {
 		List<ItemStack> drops = event.getDrops();
-		for(ItemStack i:drops) {
-			if(AetherAPI.getInstance().hasFreezable(i)) {
+		for (ItemStack i:drops) {
+			if (AetherAPI.getInstance().hasFreezable(i)) {
 				drops.set(drops.indexOf(i),AetherAPI.getInstance().getFreezable(i).getOutput());
 			}
 		}

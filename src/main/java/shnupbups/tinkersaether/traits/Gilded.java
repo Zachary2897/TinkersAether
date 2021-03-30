@@ -12,20 +12,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class Gilded extends TATrait {
-    public static final Gilded gilded = new Gilded();
+	public static final Gilded gilded = new Gilded();
 
-    public Gilded() {
-        super("gilded",0xFFDD11);
-    }
+	public Gilded() {
+		super("gilded",0xFFDD11);
+	}
 
-    @Override
-    public void afterBlockBreak(ItemStack tool, World world, IBlockState state, BlockPos pos, EntityLivingBase player, boolean wasEffective) {
-        if (!world.isRemote && state.getBlock().equals(BlocksAether.aether_log) && wasEffective) {
-            if (state.getValue(PropertyEnum.create("aether_logs", EnumLogType.class)) == EnumLogType.Oak) {
-                EntityItem amb = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ());
-                amb.setItem(new ItemStack(ItemsAether.golden_amber, 1 + random.nextInt(2)));
-                world.spawnEntity(amb);
-            }
-        }
-    }
+	@Override
+	public void afterBlockBreak(ItemStack tool, World world, IBlockState state, BlockPos pos, EntityLivingBase player, boolean wasEffective) {
+		if (!world.isRemote && state.getBlock().equals(BlocksAether.aether_log) && wasEffective) {
+			if (state.getValue(PropertyEnum.create("aether_logs", EnumLogType.class)) == EnumLogType.Oak) {
+				EntityItem amb = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ());
+				amb.setItem(new ItemStack(ItemsAether.golden_amber, 1 + random.nextInt(2)));
+				world.spawnEntity(amb);
+			}
+		}
+	}
 }

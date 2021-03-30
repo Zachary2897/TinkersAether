@@ -21,53 +21,53 @@ import java.util.List;
 
 public class ToolDart extends ProjectileCore {
 
-    public ToolDart() {
-        super(PartMaterialType.arrowShaft(TinkerTools.arrowShaft),
-                PartMaterialType.arrowHead(ModuleTools.dartTip),
-                PartMaterialType.fletching(TinkerTools.fletching));
+	public ToolDart() {
+		super(PartMaterialType.arrowShaft(TinkerTools.arrowShaft),
+				PartMaterialType.arrowHead(ModuleTools.dartTip),
+				PartMaterialType.fletching(TinkerTools.fletching));
 
-        addCategory(Category.NO_MELEE, Category.PROJECTILE);
+		addCategory(Category.NO_MELEE, Category.PROJECTILE);
 
-        this.setTranslationKey("dart").setRegistryName("dart");
-    }
+		this.setTranslationKey("dart").setRegistryName("dart");
+	}
 
-    @Override
-    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-        if(this.isInCreativeTab(tab)) {
-            addDefaultSubItems(subItems, ModuleBase.skyroot, null, TinkerMaterials.feather);
-        }
-    }
+	@Override
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+		if (this.isInCreativeTab(tab)) {
+			addDefaultSubItems(subItems, ModuleBase.skyroot, null, TinkerMaterials.feather);
+		}
+	}
 
-    @Override
-    public ProjectileNBT buildTagData(List<Material> materials) {
-        ProjectileNBT data = new ProjectileNBT();
+	@Override
+	public ProjectileNBT buildTagData(List<Material> materials) {
+		ProjectileNBT data = new ProjectileNBT();
 
-        ArrowShaftMaterialStats shaft = materials.get(0).getStatsOrUnknown(MaterialTypes.SHAFT);
-        HeadMaterialStats tip = materials.get(1).getStatsOrUnknown(MaterialTypes.HEAD);
-        FletchingMaterialStats fletching = materials.get(2).getStatsOrUnknown(MaterialTypes.FLETCHING);
+		ArrowShaftMaterialStats shaft = materials.get(0).getStatsOrUnknown(MaterialTypes.SHAFT);
+		HeadMaterialStats tip = materials.get(1).getStatsOrUnknown(MaterialTypes.HEAD);
+		FletchingMaterialStats fletching = materials.get(2).getStatsOrUnknown(MaterialTypes.FLETCHING);
 
-        data.head(tip);
-        data.fletchings(fletching);
-        data.shafts(this, shaft);
+		data.head(tip);
+		data.fletchings(fletching);
+		data.shafts(this, shaft);
 
-        data.attack += 1;
+		data.attack += 1;
 
-        return data;
-    }
+		return data;
+	}
 
-    @Override
-    public float damagePotential() {
-        return 0.5f;
-    }
+	@Override
+	public float damagePotential() {
+		return 0.5f;
+	}
 
-    @Override
-    public EntityProjectileBase getProjectile(ItemStack stack, ItemStack bow, World world, EntityPlayer player, float speed, float inaccuracy, float power, boolean usedAmmo) {
-        inaccuracy -= (1f - 1f / ProjectileNBT.from(stack).accuracy) * speed / 2f;
-        return new EntityDart(world, player, speed, inaccuracy, power, getProjectileStack(stack, world, player, usedAmmo), bow);
-    }
+	@Override
+	public EntityProjectileBase getProjectile(ItemStack stack, ItemStack bow, World world, EntityPlayer player, float speed, float inaccuracy, float power, boolean usedAmmo) {
+		inaccuracy -= (1f - 1f / ProjectileNBT.from(stack).accuracy) * speed / 2f;
+		return new EntityDart(world, player, speed, inaccuracy, power, getProjectileStack(stack, world, player, usedAmmo), bow);
+	}
 
-    @Override
-    public double attackSpeed() {
-        return 1;
-    }
+	@Override
+	public double attackSpeed() {
+		return 1;
+	}
 }

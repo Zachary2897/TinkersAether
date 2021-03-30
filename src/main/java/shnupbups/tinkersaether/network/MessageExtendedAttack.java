@@ -6,27 +6,27 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 
 public class MessageExtendedAttack implements IMessage {
 
-    private int entity;
+	private int entity;
 
-    public MessageExtendedAttack() {
+	public MessageExtendedAttack() {
 
-    }
+	}
 
-    public MessageExtendedAttack(int entity) {
-        this.entity=entity;
-    }
+	public MessageExtendedAttack(int entity) {
+		this.entity=entity;
+	}
 
-    @Override
-    public void fromBytes(ByteBuf buf) {
-        entity = ByteBufUtils.readVarInt(buf, 4);
-    }
+	@Override
+	public void fromBytes(ByteBuf buf) {
+		entity = ByteBufUtils.readVarInt(buf, 4);
+	}
 
-    @Override
-    public void toBytes(ByteBuf buf) {
-        ByteBufUtils.writeVarInt(buf, entity, 4);
-    }
+	@Override
+	public void toBytes(ByteBuf buf) {
+		ByteBufUtils.writeVarInt(buf, entity, 4);
+	}
 
-    public int getEntityId() {
-        return entity;
-    }
+	public int getEntityId() {
+		return entity;
+	}
 }

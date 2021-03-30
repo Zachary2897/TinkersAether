@@ -9,22 +9,22 @@ import shnupbups.tinkersaether.TinkersAether;
 
 public class TABlock extends Block {
 
-    private boolean beaconBase = false;
+	private boolean beaconBase = false;
 
-    public TABlock(String name, Material material) {
-        super(material);
-        this.setTranslationKey(name);
-        this.setRegistryName(TinkersAether.modid, name);
-        this.setCreativeTab(AetherCreativeTabs.blocks);
-    }
+	public TABlock(String name, Material material) {
+		super(material);
+		this.setTranslationKey(name);
+		this.setRegistryName(TinkersAether.modid, name);
+		this.setCreativeTab(AetherCreativeTabs.blocks);
+	}
 
-    @Override
-    public boolean isBeaconBase(IBlockAccess world, BlockPos pos, BlockPos beacon) {
-        return beaconBase;
-    }
+	@Override
+	public boolean isBeaconBase(IBlockAccess world, BlockPos pos, BlockPos beacon) {
+		return beaconBase;
+	}
 
-    public TABlock setBeaconBase() {
-        this.beaconBase = true;
-        return this;
-    }
+	public TABlock setBeaconBase() {
+		this.beaconBase = true;
+		return this;
+	}
 }

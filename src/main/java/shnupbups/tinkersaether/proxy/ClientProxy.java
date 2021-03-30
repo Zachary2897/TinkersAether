@@ -30,101 +30,101 @@ import javax.annotation.Nonnull;
 
 public class ClientProxy extends CommonProxy {
 
-    @Override
-    public void registerItemRenderer(Item item, int meta, String id) {
-        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(TinkersAether.modid + ":" + id, "inventory"));
-    }
+	@Override
+	public void registerItemRenderer(Item item, int meta, String id) {
+		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(TinkersAether.modid + ":" + id, "inventory"));
+	}
 
-    @Override
-    public void setRenderInfo(Material mat, int color) {
-        mat.setRenderInfo(color);
-    }
+	@Override
+	public void setRenderInfo(Material mat, int color) {
+		mat.setRenderInfo(color);
+	}
 
-    @Override
-    public void setRenderInfo(Material mat, int lo, int mid, int hi) {
-        mat.setRenderInfo(new MaterialRenderInfo.MultiColor(lo, mid, hi));
-    }
+	@Override
+	public void setRenderInfo(Material mat, int lo, int mid, int hi) {
+		mat.setRenderInfo(new MaterialRenderInfo.MultiColor(lo, mid, hi));
+	}
 
-    @Override
-    public void registerFluidModels(Fluid fluid) {
-        if (fluid == null) return;
-        Block block = fluid.getBlock();
-        if (block != null) {
-            Item item = Item.getItemFromBlock(block);
-            FluidStateMapper mapper = new FluidStateMapper(fluid);
-            if (item != null) {
-                ModelBakery.registerItemVariants(item);
-                ModelLoader.setCustomMeshDefinition(item, mapper);
-            }
-            ModelLoader.setCustomStateMapper(block, mapper);
-        }
-    }
+	@Override
+	public void registerFluidModels(Fluid fluid) {
+		if (fluid == null) return;
+		Block block = fluid.getBlock();
+		if (block != null) {
+			Item item = Item.getItemFromBlock(block);
+			FluidStateMapper mapper = new FluidStateMapper(fluid);
+			if (item != null) {
+				ModelBakery.registerItemVariants(item);
+				ModelLoader.setCustomMeshDefinition(item, mapper);
+			}
+			ModelLoader.setCustomStateMapper(block, mapper);
+		}
+	}
 
-    @Override
-    public void registerModels() {
-        super.registerModels();
+	@Override
+	public void registerModels() {
+		super.registerModels();
 
-        // entities
-        if(TAConfig.darts) {
-            RenderingRegistry.registerEntityRenderingHandler(EntityDart.class, RenderDart::new);
-        }
-        TinkersAether.logger.info("Aether Tools Module - Models Registered");
-    }
+		// entities
+		if (TAConfig.darts) {
+			RenderingRegistry.registerEntityRenderingHandler(EntityDart.class, RenderDart::new);
+		}
+		TinkersAether.logger.info("Aether Tools Module - Models Registered");
+	}
 
-    @Override
-    public void registerToolModel(ToolCore tc) {
-        ModelRegisterUtil.registerToolModel(tc);
-    }
+	@Override
+	public void registerToolModel(ToolCore tc) {
+		ModelRegisterUtil.registerToolModel(tc);
+	}
 
-    @Override
-    public void registerModifierModel(IModifier mod, ResourceLocation rl) {
-        ModelRegisterUtil.registerModifierModel(mod, rl);
-    }
+	@Override
+	public void registerModifierModel(IModifier mod, ResourceLocation rl) {
+		ModelRegisterUtil.registerModifierModel(mod, rl);
+	}
 
-    @Override
-    public <T extends Item & IToolPart> void registerToolPartModel(T part) {
-        ModelRegisterUtil.registerPartModel(part);
-    }
+	@Override
+	public <T extends Item & IToolPart> void registerToolPartModel(T part) {
+		ModelRegisterUtil.registerPartModel(part);
+	}
 
-    @Override
-    public void initToolGuis() {
-        if(TAConfig.darts) {
-            if (ModuleTools.dartShooter != null) {
-                ToolBuildGuiInfo dartShooterInfo = new ToolBuildGuiInfo(ModuleTools.dartShooter);
-                dartShooterInfo.addSlotPosition(32 - 9, 41 - 9);
-                dartShooterInfo.addSlotPosition(32 + 9, 41 + 9);
-                TinkerRegistryClient.addToolBuilding(dartShooterInfo);
-            }
-            if (ModuleTools.dart != null) {
-                ToolBuildGuiInfo dartInfo = new ToolBuildGuiInfo(ModuleTools.dart);
-                dartInfo.addSlotPosition(32, 41);
-                dartInfo.addSlotPosition(32 - 18, 41 - 18);
-                dartInfo.addSlotPosition(32 + 18, 41 + 18);
-                TinkerRegistryClient.addToolBuilding(dartInfo);
-            }
-        }
-    }
+	@Override
+	public void initToolGuis() {
+		if (TAConfig.darts) {
+			if (ModuleTools.dartShooter != null) {
+				ToolBuildGuiInfo dartShooterInfo = new ToolBuildGuiInfo(ModuleTools.dartShooter);
+				dartShooterInfo.addSlotPosition(32 - 9, 41 - 9);
+				dartShooterInfo.addSlotPosition(32 + 9, 41 + 9);
+				TinkerRegistryClient.addToolBuilding(dartShooterInfo);
+			}
+			if (ModuleTools.dart != null) {
+				ToolBuildGuiInfo dartInfo = new ToolBuildGuiInfo(ModuleTools.dart);
+				dartInfo.addSlotPosition(32, 41);
+				dartInfo.addSlotPosition(32 - 18, 41 - 18);
+				dartInfo.addSlotPosition(32 + 18, 41 + 18);
+				TinkerRegistryClient.addToolBuilding(dartInfo);
+			}
+		}
+	}
 
-    public static class FluidStateMapper extends StateMapperBase implements ItemMeshDefinition {
-        public final Fluid fluid;
-        public final ModelResourceLocation location;
+	public static class FluidStateMapper extends StateMapperBase implements ItemMeshDefinition {
+		public final Fluid fluid;
+		public final ModelResourceLocation location;
 
-        public FluidStateMapper(Fluid fluid) {
-            this.fluid = fluid;
-            this.location = new ModelResourceLocation(new ResourceLocation(TinkersAether.modid, "fluid_block"),
-                    fluid.getName());
-        }
+		public FluidStateMapper(Fluid fluid) {
+			this.fluid = fluid;
+			this.location = new ModelResourceLocation(new ResourceLocation(TinkersAether.modid, "fluid_block"),
+					fluid.getName());
+		}
 
-        @Nonnull
-        @Override
-        protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
-            return location;
-        }
+		@Nonnull
+		@Override
+		protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
+			return location;
+		}
 
-        @Nonnull
-        @Override
-        public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack) {
-            return location;
-        }
-    }
+		@Nonnull
+		@Override
+		public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack) {
+			return location;
+		}
+	}
 }

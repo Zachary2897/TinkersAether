@@ -29,69 +29,69 @@ import slimeknights.tconstruct.tools.TinkerMaterials;
 
 @Mod(modid = TinkersAether.modid, name = TinkersAether.name, version = TinkersAether.version, acceptedMinecraftVersions = "[1.12.2]", dependencies = "required-after:mantle;required-after:tconstruct;required-after:aether_legacy@[1.5.0,);")
 public class TinkersAether {
-    public static final String modid = "tinkersaether";
-    public static final String name = "Tinkers' Aether";
-    public static final String version = "v1.4.1";
+	public static final String modid = "tinkersaether";
+	public static final String name = "Tinkers' Aether";
+	public static final String version = "v1.4.1";
 
-    @Mod.Instance(modid)
-    public static TinkersAether instance;
+	@Mod.Instance(modid)
+	public static TinkersAether instance;
 
-    @SidedProxy(serverSide = "shnupbups.tinkersaether.proxy.CommonProxy", clientSide = "shnupbups.tinkersaether.proxy.ClientProxy")
-    public static CommonProxy proxy;
+	@SidedProxy(serverSide = "shnupbups.tinkersaether.proxy.CommonProxy", clientSide = "shnupbups.tinkersaether.proxy.ClientProxy")
+	public static CommonProxy proxy;
 
-    public static SimpleNetworkWrapper network = NetworkRegistry.INSTANCE.newSimpleChannel(modid+"network");
+	public static SimpleNetworkWrapper network = NetworkRegistry.INSTANCE.newSimpleChannel(modid+"network");
 
-    public static final Logger logger = LogManager.getLogger(modid);
+	public static final Logger logger = LogManager.getLogger(modid);
 
-    public static BowMaterialStats plzNo = new BowMaterialStats(0.2f, 0.4f, -1f);
+	public static BowMaterialStats plzNo = new BowMaterialStats(0.2f, 0.4f, -1f);
 
-    public TinkersAether() {
-        super();
-        MinecraftForge.EVENT_BUS.register(this);
-    }
+	public TinkersAether() {
+		super();
+		MinecraftForge.EVENT_BUS.register(this);
+	}
 
-    @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-        ModuleBase.base.preInit();
-    }
+	@Mod.EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		ModuleBase.base.preInit();
+	}
 
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {
-        int packet = 0;
-        network.registerMessage(HandlerExtendedAttack.class,MessageExtendedAttack.class, packet++, Side.SERVER);
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event) {
+		int packet = 0;
+		network.registerMessage(HandlerExtendedAttack.class,MessageExtendedAttack.class, packet++, Side.SERVER);
 
-        if(TAConfig.darts) {
-            proxy.initToolGuis();
-        }
+		if (TAConfig.darts) {
+			proxy.initToolGuis();
+		}
 
-        ModuleBase.base.init();
+		ModuleBase.base.init();
 
-        if(TAConfig.skyroot) {
-            MiscUtils.displace(TinkerMaterials.wood.getIdentifier()); // Skyroot needs priority
-        }
-		if(TAConfig.skyrootLeaf||TAConfig.goldenOakLeaf||TAConfig.crystalLeaf||TAConfig.holidayLeaf) {
+		if (TAConfig.skyroot) {
+			MiscUtils.displace(TinkerMaterials.wood.getIdentifier()); // Skyroot needs priority
+		}
+		if (TAConfig.skyrootLeaf||TAConfig.goldenOakLeaf||TAConfig.crystalLeaf||TAConfig.holidayLeaf) {
 			MiscUtils.displace(TinkerMaterials.leaf.getIdentifier()); // Leaves need priority
 		}
-		if(TAConfig.goldenFeather) {
+		if (TAConfig.goldenFeather) {
 			MiscUtils.displace(TinkerMaterials.feather.getIdentifier()); // Golden Feather needs priority
 		}
-    }
+	}
 
-    @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
-        ModuleBase.base.postInit();
-    }
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+		ModuleBase.base.postInit();
+	}
 
-    @SubscribeEvent
-    public void registerEntities(RegistryEvent.Register<EntityEntry> event) {
-        if(TAConfig.darts) {
-            EntityRegistry.registerModEntity(new ResourceLocation(TinkersAether.modid,"dart"), EntityDart.class, "dart",13, TinkersAether.instance, 64, 1, false);
-        }
-        TinkersAether.logger.info("Aether Tools Module - Entities Registered");
-    }
+	@SubscribeEvent
+	public void registerEntities(RegistryEvent.Register<EntityEntry> event) {
+		if (TAConfig.darts) {
+			EntityRegistry.registerModEntity(new ResourceLocation(TinkersAether.modid,"dart"), EntityDart.class, "dart",13, TinkersAether.instance, 64, 1, false);
+		}
+		TinkersAether.logger.info("Aether Tools Module - Entities Registered");
+	}
 
-    @SubscribeEvent
-    public void registerModels(ModelRegistryEvent event) {
-        proxy.registerModels();
-    }
+	@SubscribeEvent
+	public void registerModels(ModelRegistryEvent event) {
+		proxy.registerModels();
+	}
 }

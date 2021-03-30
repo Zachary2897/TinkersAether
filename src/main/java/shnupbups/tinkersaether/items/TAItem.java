@@ -7,22 +7,22 @@ import shnupbups.tinkersaether.TinkersAether;
 
 public class TAItem extends Item {
 
-    private boolean beaconPayment = false;
+	private boolean beaconPayment = false;
 
-    public TAItem(String name) {
-        super();
-        this.setTranslationKey(name);
-        this.setRegistryName(TinkersAether.modid, name);
-        this.setCreativeTab(AetherCreativeTabs.material);
-    }
+	public TAItem(String name) {
+		super();
+		this.setTranslationKey(name);
+		this.setRegistryName(TinkersAether.modid, name);
+		this.setCreativeTab(AetherCreativeTabs.material);
+	}
 
-    @Override
-    public boolean isBeaconPayment(ItemStack stack) {
-        return beaconPayment;
-    }
+	@Override
+	public boolean isBeaconPayment(ItemStack stack) {
+		return beaconPayment;
+	}
 
-    public TAItem setBeaconPayment() {
-        this.beaconPayment = true;
-        return this;
-    }
+	public TAItem setBeaconPayment() {
+		this.beaconPayment = true;
+		return this;
+	}
 }

@@ -9,30 +9,30 @@ import slimeknights.tconstruct.library.tools.IToolPart;
 import slimeknights.tconstruct.library.tools.ToolCore;
 
 public class CommonProxy {
-    public void registerItemRenderer(Item item, int meta, String id) {
-    }
+	public void registerItemRenderer(Item item, int meta, String id) {
+	}
 
-    public void setRenderInfo(Material mat, int color) {
-    }
+	public void setRenderInfo(Material mat, int color) {
+	}
 
-    public void setRenderInfo(Material mat, int lo, int mid, int hi) {
-    }
+	public void setRenderInfo(Material mat, int lo, int mid, int hi) {
+	}
 
-    public void registerFluidModels(Fluid fluid) {
-    }
+	public void registerFluidModels(Fluid fluid) {
+	}
 
-    public void registerToolModel(ToolCore tc) {
-    }
+	public void registerToolModel(ToolCore tc) {
+	}
 
-    public void registerModifierModel(IModifier mod, ResourceLocation rl) {
-    }
+	public void registerModifierModel(IModifier mod, ResourceLocation rl) {
+	}
 
-    public <T extends Item & IToolPart> void registerToolPartModel(T part) {
-    }
+	public <T extends Item & IToolPart> void registerToolPartModel(T part) {
+	}
 
-    public void initToolGuis() {
-    }
+	public void initToolGuis() {
+	}
 
-    public void registerModels() {
-    }
+	public void registerModels() {
+	}
 }

@@ -12,37 +12,37 @@ import java.lang.reflect.Field;
 import java.util.Map;
 
 public class MiscUtils {
-    private static final Map<String, Material> tinkerMaterials;
+	private static final Map<String, Material> tinkerMaterials;
 
-    static {
-        try {
-            Field temp = TinkerRegistry.class.getDeclaredField("materials");
-            temp.setAccessible(true);
-            tinkerMaterials = (Map<String, Material>) MethodHandles.lookup().unreflectGetter(temp).invokeExact();
-        } catch (Throwable e) {
-            Throwables.throwIfUnchecked(e);
-            throw new RuntimeException(e);
-        }
-    }
+	static {
+		try {
+			Field temp = TinkerRegistry.class.getDeclaredField("materials");
+			temp.setAccessible(true);
+			tinkerMaterials = (Map<String, Material>) MethodHandles.lookup().unreflectGetter(temp).invokeExact();
+		} catch (Throwable e) {
+			Throwables.throwIfUnchecked(e);
+			throw new RuntimeException(e);
+		}
+	}
 
-    public static void displace(String displace) {
-        Material displaced = tinkerMaterials.remove(displace);
-        tinkerMaterials.put(displace, displaced);
-    }
+	public static void displace(String displace) {
+		Material displaced = tinkerMaterials.remove(displace);
+		tinkerMaterials.put(displace, displaced);
+	}
 
-    public static ItemStack stackFromOreDict(String od) {
-        NonNullList<ItemStack> list = OreDictionary.getOres(od,false);
-        if(!list.isEmpty()) {
-            return list.get(0);
-        }
-        return null;
-    }
+	public static ItemStack stackFromOreDict(String od) {
+		NonNullList<ItemStack> list = OreDictionary.getOres(od,false);
+		if (!list.isEmpty()) {
+			return list.get(0);
+		}
+		return null;
+	}
 
-    public static boolean between(float num, float min, float max) {
-        return num <= max && num >= min ? true : false;
-    }
+	public static boolean between(float num, float min, float max) {
+		return num <= max && num >= min ? true : false;
+	}
 
-    public static float percent(float num, float pc) {
-        return (pc/100)*num;
-    }
+	public static float percent(float num, float pc) {
+		return (pc/100)*num;
+	}
 }

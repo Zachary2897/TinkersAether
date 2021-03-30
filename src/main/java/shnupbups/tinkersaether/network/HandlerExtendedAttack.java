@@ -11,22 +11,22 @@ import slimeknights.tconstruct.library.tools.TinkerToolCore;
 import slimeknights.tconstruct.library.utils.ToolHelper;
 
 public class HandlerExtendedAttack implements IMessageHandler<MessageExtendedAttack,IMessage> {
-    @Override
-    public IMessage onMessage(MessageExtendedAttack message, MessageContext ctx) {
-        EntityPlayerMP player = ctx.getServerHandler().player;
-        player.getServer().addScheduledTask( new Runnable() {
-            @Override
-            public void run() {
-                Entity entity = player.getEntityWorld().getEntityByID(message.getEntityId());
-                ItemStack stack = player.getHeldItemMainhand();
-                if(stack.isEmpty() || !(stack.getItem() instanceof TinkerToolCore) || entity == null) {
-                    return;
-                }
-                if(ToolHelper.getTraits(stack).contains(Reach.reach)) {
-                    player.attackTargetEntityWithCurrentItem(entity);
-                }
-            }
-        });
-        return null;
-    }
+	@Override
+	public IMessage onMessage(MessageExtendedAttack message, MessageContext ctx) {
+		EntityPlayerMP player = ctx.getServerHandler().player;
+		player.getServer().addScheduledTask( new Runnable() {
+			@Override
+			public void run() {
+				Entity entity = player.getEntityWorld().getEntityByID(message.getEntityId());
+				ItemStack stack = player.getHeldItemMainhand();
+				if (stack.isEmpty() || !(stack.getItem() instanceof TinkerToolCore) || entity == null) {
+					return;
+				}
+				if (ToolHelper.getTraits(stack).contains(Reach.reach)) {
+					player.attackTargetEntityWithCurrentItem(entity);
+				}
+			}
+		});
+		return null;
+	}
 }
