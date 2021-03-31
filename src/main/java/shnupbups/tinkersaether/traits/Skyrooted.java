@@ -16,7 +16,7 @@ public class Skyrooted extends TATrait {
 	public static final Skyrooted skyrooted = new Skyrooted();
 
 	public Skyrooted() {
-		super("skyrooted",0x6C633E);
+		super("skyrooted", 0x6C633E);
 	}
 
 	@Override

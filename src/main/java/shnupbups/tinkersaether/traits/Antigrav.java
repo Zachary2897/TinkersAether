@@ -15,7 +15,7 @@ public class Antigrav extends TATrait{
 	public static final Antigrav antigrav = new Antigrav();
 
 	public Antigrav() {
-		super("antigrav",0xCC55AA);
+		super("antigrav", 0xCC55AA);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

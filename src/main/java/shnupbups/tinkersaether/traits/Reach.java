@@ -25,7 +25,7 @@ public class Reach extends TATrait {
 	public static final AttributeModifier reachModifier = new AttributeModifier(UUID.fromString("df6eabe7-6947-4a56-9099-002f90370708"), "Tinkers Aether Reach Modifier", 5.0D, 0);
 
 	public Reach() {
-		super("reach",0xEEEEDD);
+		super("reach", 0xEEEEDD);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

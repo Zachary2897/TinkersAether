@@ -6,11 +6,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.server.SPacketEntityVelocity;
 
 public class Launching extends TATrait {
-
 	public static final Launching launching = new Launching();
 
 	public Launching() {
-		super("launching",0xCC55AA);
+		super("launching", 0xCC55AA);
 	}
 
 	@Override

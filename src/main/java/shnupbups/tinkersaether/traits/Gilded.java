@@ -15,7 +15,7 @@ public class Gilded extends TATrait {
 	public static final Gilded gilded = new Gilded();
 
 	public Gilded() {
-		super("gilded",0xFFDD11);
+		super("gilded", 0xFFDD11);
 	}
 
 	@Override

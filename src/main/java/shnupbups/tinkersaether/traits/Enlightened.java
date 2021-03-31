@@ -12,7 +12,7 @@ public class Enlightened extends TATrait {
 	public static final Enlightened enlightened = new Enlightened();
 
 	public Enlightened() {
-		super("enlightened",0xEEEE11);
+		super("enlightened", 0xEEEE11);
 	}
 
 	@Override

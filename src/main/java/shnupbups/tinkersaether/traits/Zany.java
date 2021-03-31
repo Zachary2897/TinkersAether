@@ -14,7 +14,7 @@ public class Zany extends TATrait {
 	public static final Zany zany = new Zany();
 
 	public Zany() {
-		super("zany",0x6611DD);
+		super("zany", 0x6611DD);
 	}
 
 	private int calcBonus(ItemStack tool) {

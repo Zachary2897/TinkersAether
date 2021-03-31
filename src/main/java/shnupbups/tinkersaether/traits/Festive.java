@@ -12,7 +12,7 @@ public class Festive extends TATrait {
 	public static final Festive festive = new Festive();
 
 	public Festive() {
-		super("festive",0xEEEE11);
+		super("festive", 0xEEEE11);
 	}
 
 	@Override

@@ -10,7 +10,7 @@ public class Refrigeration extends TATrait {
 	public static final Refrigeration refrigeration = new Refrigeration();
 
 	public Refrigeration() {
-		super("refrigeration",0x99999F);
+		super("refrigeration", 0x99999F);
 	}
 
 	@Override

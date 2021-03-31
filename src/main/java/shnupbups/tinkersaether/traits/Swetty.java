@@ -8,7 +8,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class Swetty extends TATrait {
-
 	public static final Swetty swetty = new Swetty();
 
 	private static float chance = 0.0033f;
