@@ -348,16 +348,16 @@ public class ModuleBase {
 			registry.register(valkBlock);
 			TinkersAether.proxy.registerItemRenderer(valkyrieIngot, 0, "valkyrie_ingot");
 			TinkersAether.proxy.registerItemRenderer(valkyrieNugget, 0, "valkyrie_nugget");
-			TinkersAether.proxy.registerItemRenderer(valkBlock,0,"valkyrie_block");
-			OreDictionary.registerOre("ingotValkyrie",valkyrieIngot);
-			OreDictionary.registerOre("nuggetValkyrie",valkyrieNugget);
-			OreDictionary.registerOre("blockValkyrie",valkyrieBlock);
+			TinkersAether.proxy.registerItemRenderer(valkBlock, 0, "valkyrie_block");
+			OreDictionary.registerOre("ingotValkyrie", valkyrieIngot);
+			OreDictionary.registerOre("nuggetValkyrie", valkyrieNugget);
+			OreDictionary.registerOre("blockValkyrie", valkyrieBlock);
 		}
 		if (TAConfig.swet) {
 			registry.register(swetCrystal);
 			TinkersAether.proxy.registerItemRenderer(swetCrystal, 0, "swet_crystal");
-			OreDictionary.registerOre("slimecrystal",swetCrystal);
-			OreDictionary.registerOre("slimecrystalSwet",swetCrystal);
+			OreDictionary.registerOre("slimecrystal", swetCrystal);
+			OreDictionary.registerOre("slimecrystalSwet", swetCrystal);
 		}
 		TinkersAether.logger.info("Base Module - Items Registered");
 	}
@@ -366,7 +366,7 @@ public class ModuleBase {
 	public void registerBlocks(RegistryEvent.Register<Block> event) {
 		IForgeRegistry<Block> registry = event.getRegistry();
 		if (TAConfig.valkyrie) {
-			valkyrieBlock.setHarvestLevel("pickaxe",3);
+			valkyrieBlock.setHarvestLevel("pickaxe", 3);
 			valkyrieBlock.setHardness(4.0f);
 			registry.register(valkyrieBlock);
 		}
@@ -377,7 +377,7 @@ public class ModuleBase {
 	public void onRegisterEnchantmentEvent(RegistryEvent.Register<AetherEnchantment> event) {
 		IForgeRegistry<AetherEnchantment> registry = event.getRegistry();
 		if (TAConfig.valkyrie&&TAConfig.valkyrieMedalEnchant) {
-			registry.register(new AetherEnchantment(new ItemStack(ItemsAether.victory_medal),new ItemStack(valkyrieNugget),250));
+			registry.register(new AetherEnchantment(new ItemStack(ItemsAether.victory_medal), new ItemStack(valkyrieNugget), 250));
 		}
 		TinkersAether.logger.info("Base Module - Enchantment Recipes Registered");
 	}
@@ -386,11 +386,11 @@ public class ModuleBase {
 	public void onLootTableLoad(LootTableLoadEvent event) {
 		if (TAConfig.valkyrie&&TAConfig.valkyrieDungeonChest) {
 			if (event.getName().toString().equals("aether_legacy:chests/silver_dungeon_chest")) {
-				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid,"inject/silver_dungeon_chest"),100,10,new LootCondition[0], "ta_inject_entry");
-				event.getTable().addPool(new LootPool(new LootEntry[]{entry},new LootCondition[0],new RandomValueRange(1),new RandomValueRange(0,1),"ta_inject_pool"));
+				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid, "inject/silver_dungeon_chest"), 100, 10, new LootCondition[0], "ta_inject_entry");
+				event.getTable().addPool(new LootPool(new LootEntry[]{entry}, new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0, 1), "ta_inject_pool"));
 			} else if (event.getName().toString().equals("aether_legacy:chests/silver_dungeon_reward")) {
-				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid,"inject/silver_dungeon_reward"),100,0,new LootCondition[0], "ta_inject_entry");
-				event.getTable().addPool(new LootPool(new LootEntry[]{entry},new LootCondition[0],new RandomValueRange(1),new RandomValueRange(0,1),"ta_inject_pool"));
+				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid, "inject/silver_dungeon_reward"), 100, 0, new LootCondition[0], "ta_inject_entry");
+				event.getTable().addPool(new LootPool(new LootEntry[]{entry}, new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0, 1), "ta_inject_pool"));
 			}
 		}
 	}

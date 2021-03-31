@@ -10,7 +10,7 @@ import shnupbups.tinkersaether.traits.Reach;
 import slimeknights.tconstruct.library.tools.TinkerToolCore;
 import slimeknights.tconstruct.library.utils.ToolHelper;
 
-public class HandlerExtendedAttack implements IMessageHandler<MessageExtendedAttack,IMessage> {
+public class HandlerExtendedAttack implements IMessageHandler<MessageExtendedAttack, IMessage> {
 	@Override
 	public IMessage onMessage(MessageExtendedAttack message, MessageContext ctx) {
 		EntityPlayerMP player = ctx.getServerHandler().player;

@@ -11,7 +11,7 @@ public class OreDict {
 
 	public static void register() {
 		OreDictionary.registerOre("plankSkyroot", BlocksAether.skyroot_plank);
-		OreDictionary.registerOre("logSkyroot",new ItemStack(BlocksAether.aether_log, 1, WILDCARD));
+		OreDictionary.registerOre("logSkyroot", new ItemStack(BlocksAether.aether_log, 1, WILDCARD));
 		OreDictionary.registerOre("stickSkyroot", ItemsAether.skyroot_stick);
 
 		OreDictionary.registerOre("holystone", BlocksAether.holystone);

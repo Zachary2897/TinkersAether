@@ -58,7 +58,7 @@ public class TinkersAether {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		int packet = 0;
-		network.registerMessage(HandlerExtendedAttack.class,MessageExtendedAttack.class, packet++, Side.SERVER);
+		network.registerMessage(HandlerExtendedAttack.class, MessageExtendedAttack.class, packet++, Side.SERVER);
 
 		if (TAConfig.darts) {
 			proxy.initToolGuis();
@@ -85,7 +85,7 @@ public class TinkersAether {
 	@SubscribeEvent
 	public void registerEntities(RegistryEvent.Register<EntityEntry> event) {
 		if (TAConfig.darts) {
-			EntityRegistry.registerModEntity(new ResourceLocation(TinkersAether.modid,"dart"), EntityDart.class, "dart",13, TinkersAether.instance, 64, 1, false);
+			EntityRegistry.registerModEntity(new ResourceLocation(TinkersAether.modid, "dart"), EntityDart.class, "dart", 13, TinkersAether.instance, 64, 1, false);
 		}
 		TinkersAether.logger.info("Aether Tools Module - Entities Registered");
 	}

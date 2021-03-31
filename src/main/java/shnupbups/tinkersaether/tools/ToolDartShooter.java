@@ -155,6 +155,6 @@ public class ToolDartShooter extends BowCore {
 			}
 			return projectile;
 		}
-		return super.getProjectileEntity(ammo,bow,world,player,power,inaccuracy,progress,usedAmmo);
+		return super.getProjectileEntity(ammo, bow, world, player, power, inaccuracy, progress, usedAmmo);
 	}
 }

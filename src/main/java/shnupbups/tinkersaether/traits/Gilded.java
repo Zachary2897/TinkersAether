@@ -5,8 +5,10 @@ import com.gildedgames.the_aether.blocks.util.EnumLogType;
 import com.gildedgames.the_aether.items.ItemsAether;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -20,11 +22,13 @@ public class Gilded extends TATrait {
 
 	@Override
 	public void afterBlockBreak(ItemStack tool, World world, IBlockState state, BlockPos pos, EntityLivingBase player, boolean wasEffective) {
-		if (!world.isRemote && state.getBlock().equals(BlocksAether.aether_log) && wasEffective) {
-			if (state.getValue(PropertyEnum.create("aether_logs", EnumLogType.class)) == EnumLogType.Oak) {
-				EntityItem amb = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ());
-				amb.setItem(new ItemStack(ItemsAether.golden_amber, 1 + random.nextInt(2)));
-				world.spawnEntity(amb);
+		if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, tool) == 0) {
+			if (!world.isRemote && state.getBlock().equals(BlocksAether.aether_log) && wasEffective) {
+				if (state.getValue(PropertyEnum.create("aether_logs", EnumLogType.class)) == EnumLogType.Oak) {
+					EntityItem amb = new EntityItem(world, pos.getX(), pos.getY(), pos.getZ());
+					amb.setItem(new ItemStack(ItemsAether.golden_amber, 1 + random.nextInt(2)));
+					world.spawnEntity(amb);
+				}
 			}
 		}
 	}

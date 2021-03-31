@@ -18,9 +18,8 @@ public class Refrigeration extends TATrait {
 		List<ItemStack> drops = event.getDrops();
 		for (ItemStack i:drops) {
 			if (AetherAPI.getInstance().hasFreezable(i)) {
-				drops.set(drops.indexOf(i),AetherAPI.getInstance().getFreezable(i).getOutput());
+				drops.set(drops.indexOf(i), AetherAPI.getInstance().getFreezable(i).getOutput());
 			}
 		}
 	}
-
 }

@@ -21,13 +21,13 @@ public class Zany extends TATrait {
 		int durability = ToolHelper.getCurrentDurability(tool);
 		int maxDurability = ToolHelper.getMaxDurability(tool);
 
-		if (MiscUtils.between(durability, 0, MiscUtils.percent(maxDurability,20))) {
+		if (MiscUtils.between(durability, 0, MiscUtils.percent(maxDurability, 20))) {
 			return 6;
-		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability,20), MiscUtils.percent(maxDurability,40))) {
+		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 20), MiscUtils.percent(maxDurability, 40))) {
 			return 4;
-		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability,40), MiscUtils.percent(maxDurability,60))) {
+		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 40), MiscUtils.percent(maxDurability, 60))) {
 			return 3;
-		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability,60), MiscUtils.percent(maxDurability,80))) {
+		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 60), MiscUtils.percent(maxDurability, 80))) {
 			return 2;
 		} else {
 			return 1;

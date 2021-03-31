@@ -31,7 +31,7 @@ public class MiscUtils {
 	}
 
 	public static ItemStack stackFromOreDict(String od) {
-		NonNullList<ItemStack> list = OreDictionary.getOres(od,false);
+		NonNullList<ItemStack> list = OreDictionary.getOres(od, false);
 		if (!list.isEmpty()) {
 			return list.get(0);
 		}

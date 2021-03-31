@@ -12,7 +12,7 @@ public class RenderDart extends RenderProjectileBase<EntityDart> {
 
 	@Override
 	protected void customCustomRendering(EntityDart entity, double x, double y, double z, float entityYaw, float partialTicks) {
-		GL11.glRotatef(90,1,0,0);
-		GL11.glTranslatef(0,0.2f,0f);
+		GL11.glRotatef(90, 1, 0, 0);
+		GL11.glTranslatef(0, 0.2f, 0f);
 	}
 }
