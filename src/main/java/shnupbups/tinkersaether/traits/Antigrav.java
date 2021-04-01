@@ -35,12 +35,14 @@ public class Antigrav extends TATrait{
 				return;
 			}
 
-			if (!world.isRemote) {
+			if (!world.isRemote && ForgeHooks.canToolHarvestBlock(world, pos, heldItem)) {
 				EntityFloatingBlock ent = new EntityFloatingBlock(world, pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, world.getBlockState(pos));
 				world.spawnEntity(ent);
 			}
 
-			ToolHelper.damageTool(event.getItemStack(), 4, event.getEntityLiving());
+			if (!event.getEntityPlayer().isCreative()) {
+				ToolHelper.damageTool(event.getItemStack(), 4, event.getEntityLiving());
+			}
 		}
 	}
 }
