@@ -36,7 +36,7 @@ public class ToolDartShooter extends BowCore {
 
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-		if(this.isInCreativeTab(tab)) {
+		if (this.isInCreativeTab(tab)) {
 			addDefaultSubItems(subItems, null, null);
 		}
 	}
@@ -107,7 +107,7 @@ public class ToolDartShooter extends BowCore {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
 		ItemStack itemStackIn = playerIn.getHeldItem(hand);
-		if(!ToolHelper.isBroken(itemStackIn)) {
+		if (!ToolHelper.isBroken(itemStackIn)) {
 			super.onPlayerStoppedUsing(itemStackIn, worldIn, playerIn, 0);
 		}
 		else {
@@ -125,9 +125,9 @@ public class ToolDartShooter extends BowCore {
 
 	@Override
 	protected List<Item> getAmmoItems() {
-		if(dartMatches == null) {
+		if (dartMatches == null) {
 			ImmutableList.Builder<Item> builder = ImmutableList.builder();
-			if(ModuleTools.dart != null) {
+			if (ModuleTools.dart != null) {
 				builder.add(ModuleTools.dart);
 			}
 			builder.add(ItemsAether.dart);
@@ -138,22 +138,22 @@ public class ToolDartShooter extends BowCore {
 
 	@Override
 	public EntityArrow getProjectileEntity(ItemStack ammo, ItemStack bow, World world, EntityPlayer player, float power, float inaccuracy, float progress, boolean usedAmmo) {
-		if(ammo.getItem() == ItemsAether.dart) {
+		if (ammo.getItem() == ItemsAether.dart) {
 			EntityArrow projectile;
-			if(ammo.getMetadata()==0) {
+			if (ammo.getMetadata()==0) {
 				projectile = new EntityDartGolden(world, player);
 			}
-			else if(ammo.getMetadata()==1) {
+			else if (ammo.getMetadata()==1) {
 				projectile = new EntityDartPoison(world, player);
 			}
 			else {
 				projectile = new EntityDartEnchanted(world, player);
 			}
 			projectile.shoot(player, player.rotationPitch, player.rotationYaw, 0.0F, power, inaccuracy);
-			if(player.capabilities.isCreativeMode) {
+			if (player.capabilities.isCreativeMode) {
 				projectile.pickupStatus = EntityArrow.PickupStatus.CREATIVE_ONLY;
 			}
-			else if(!usedAmmo) {
+			else if (!usedAmmo) {
 				projectile.pickupStatus = EntityArrow.PickupStatus.DISALLOWED;
 			}
 			return projectile;
