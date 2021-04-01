@@ -23,13 +23,17 @@ public class Zany extends TATrait {
 
 		if (MiscUtils.between(durability, 0, MiscUtils.percent(maxDurability, 20))) {
 			return 6;
-		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 20), MiscUtils.percent(maxDurability, 40))) {
+		}
+		else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 20), MiscUtils.percent(maxDurability, 40))) {
 			return 4;
-		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 40), MiscUtils.percent(maxDurability, 60))) {
+		}
+		else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 40), MiscUtils.percent(maxDurability, 60))) {
 			return 3;
-		} else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 60), MiscUtils.percent(maxDurability, 80))) {
+		}
+		else if (MiscUtils.between(durability, MiscUtils.percent(maxDurability, 60), MiscUtils.percent(maxDurability, 80))) {
 			return 2;
-		} else {
+		}
+		else {
 			return 1;
 		}
 	}

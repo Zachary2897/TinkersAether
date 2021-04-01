@@ -19,7 +19,8 @@ public class MiscUtils {
 			Field temp = TinkerRegistry.class.getDeclaredField("materials");
 			temp.setAccessible(true);
 			tinkerMaterials = (Map<String, Material>) MethodHandles.lookup().unreflectGetter(temp).invokeExact();
-		} catch (Throwable e) {
+		}
+		catch (Throwable e) {
 			Throwables.throwIfUnchecked(e);
 			throw new RuntimeException(e);
 		}

@@ -388,7 +388,8 @@ public class ModuleBase {
 			if (event.getName().toString().equals("aether_legacy:chests/silver_dungeon_chest")) {
 				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid, "inject/silver_dungeon_chest"), 100, 10, new LootCondition[0], "ta_inject_entry");
 				event.getTable().addPool(new LootPool(new LootEntry[]{entry}, new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0, 1), "ta_inject_pool"));
-			} else if (event.getName().toString().equals("aether_legacy:chests/silver_dungeon_reward")) {
+			}
+			else if (event.getName().toString().equals("aether_legacy:chests/silver_dungeon_reward")) {
 				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid, "inject/silver_dungeon_reward"), 100, 0, new LootCondition[0], "ta_inject_entry");
 				event.getTable().addPool(new LootPool(new LootEntry[]{entry}, new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0, 1), "ta_inject_pool"));
 			}

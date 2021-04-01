@@ -46,7 +46,8 @@ public class Reach extends TATrait {
 			ItemStack stack = player.getHeldItemMainhand();
 			if (!player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(this.reachModifier) && isToolWithTrait(stack)) {
 				player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).applyModifier(this.reachModifier);
-			} else if (player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(this.reachModifier) && !isToolWithTrait(stack)) {
+			}
+			else if (player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).hasModifier(this.reachModifier) && !isToolWithTrait(stack)) {
 				player.getEntityAttribute(EntityPlayer.REACH_DISTANCE).removeModifier(this.reachModifier);
 			}
 		}

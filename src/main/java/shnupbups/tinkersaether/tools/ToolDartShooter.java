@@ -109,7 +109,8 @@ public class ToolDartShooter extends BowCore {
 		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if(!ToolHelper.isBroken(itemStackIn)) {
 			super.onPlayerStoppedUsing(itemStackIn, worldIn, playerIn, 0);
-		} else {
+		}
+		else {
 			return super.onItemRightClick(worldIn, playerIn, hand);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, itemStackIn);
@@ -141,9 +142,11 @@ public class ToolDartShooter extends BowCore {
 			EntityArrow projectile;
 			if(ammo.getMetadata()==0) {
 				projectile = new EntityDartGolden(world, player);
-			} else if(ammo.getMetadata()==1) {
+			}
+			else if(ammo.getMetadata()==1) {
 				projectile = new EntityDartPoison(world, player);
-			} else {
+			}
+			else {
 				projectile = new EntityDartEnchanted(world, player);
 			}
 			projectile.shoot(player, player.rotationPitch, player.rotationYaw, 0.0F, power, inaccuracy);
