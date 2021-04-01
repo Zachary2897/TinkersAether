@@ -1,6 +1,6 @@
 # Tinkers' Aether: ZackPack Edition
 
-This is a fork of Tinkers' Aether by Shnupbups, which is an addon for Tinkers' Construct that adds support for materials from The Aether.
+This is a fork of [Tinkers' Aether](https://github.com/Shnupbups/TinkersAether) by Shnupbups, which is an addon for [Tinkers' Construct](https://github.com/SlimeKnights/TinkersConstruct) that adds support for materials from [The Aether](https://github.com/Gilded-Games/The-Aether-Archived).
 
 ## Materials
 Current tool materials include:
