@@ -2,6 +2,7 @@ package shnupbups.tinkersaether.blocks;
 
 import com.gildedgames.the_aether.registry.creative_tabs.AetherCreativeTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -16,6 +17,7 @@ public class TABlock extends Block {
 		this.setTranslationKey(name);
 		this.setRegistryName(TinkersAether.modid, name);
 		this.setCreativeTab(AetherCreativeTabs.blocks);
+		this.setSoundType(SoundType.METAL);
 	}
 
 	@Override

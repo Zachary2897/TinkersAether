@@ -156,7 +156,7 @@ public class ModuleBase {
 
 		if (TAConfig.valkyrie) {
 			TinkerRegistry.addMaterialStats(valkyrie,
-					new HeadMaterialStats(1000, 8.0F, 6.50F, COBALT),
+					new HeadMaterialStats(1000, 8.0F, 6.50F, OBSIDIAN),
 					new HandleMaterialStats(1.0F, 80),
 					new ExtraMaterialStats(70),
 					TinkersAether.plzNo);
