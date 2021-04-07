@@ -44,6 +44,6 @@ public class MiscUtils {
 	}
 
 	public static float percent(float num, float pc) {
-		return (pc/100)*num;
+		return (pc / 100) * num;
 	}
 }

@@ -119,7 +119,7 @@ public class ModuleTools {
 				TinkerModifiers.modWebbed,
 		}) {
 			TinkersAether.proxy.registerModifierModel(modifier,
-					new ResourceLocation(TinkersAether.modid, "models/item/modifiers/"+modifier.getIdentifier()));
+					new ResourceLocation(TinkersAether.modid, "models/item/modifiers/" + modifier.getIdentifier()));
 		}
 
 		TinkersAether.logger.info("Tools Module - Modifier Models Registered");

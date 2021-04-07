@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class Swetty extends TATrait {
 	public static final Swetty swetty = new Swetty();
 
-	private static float chance = 0.0033f;
+	private static float chance = 0.0033F;
 
 	public Swetty() {
 		super("swetty", 0x7777FF);

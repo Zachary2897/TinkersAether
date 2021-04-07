@@ -39,11 +39,11 @@ public class TinkersAether {
 	@SidedProxy(serverSide = "shnupbups.tinkersaether.proxy.CommonProxy", clientSide = "shnupbups.tinkersaether.proxy.ClientProxy")
 	public static CommonProxy proxy;
 
-	public static SimpleNetworkWrapper network = NetworkRegistry.INSTANCE.newSimpleChannel(modid+"network");
+	public static SimpleNetworkWrapper network = NetworkRegistry.INSTANCE.newSimpleChannel(modid + "network");
 
 	public static final Logger logger = LogManager.getLogger(modid);
 
-	public static BowMaterialStats plzNo = new BowMaterialStats(0.2f, 0.4f, -1f);
+	public static BowMaterialStats plzNo = new BowMaterialStats(0.2F, 0.4F, -1F);
 
 	public TinkersAether() {
 		super();
@@ -69,7 +69,7 @@ public class TinkersAether {
 		if (TAConfig.skyroot) {
 			MiscUtils.displace(TinkerMaterials.wood.getIdentifier()); // Skyroot needs priority
 		}
-		if (TAConfig.skyrootLeaf||TAConfig.goldenOakLeaf||TAConfig.crystalLeaf||TAConfig.holidayLeaf) {
+		if (TAConfig.skyrootLeaf || TAConfig.goldenOakLeaf || TAConfig.crystalLeaf || TAConfig.holidayLeaf) {
 			MiscUtils.displace(TinkerMaterials.leaf.getIdentifier()); // Leaves need priority
 		}
 		if (TAConfig.goldenFeather) {

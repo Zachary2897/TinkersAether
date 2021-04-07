@@ -13,7 +13,7 @@ public class MessageExtendedAttack implements IMessage {
 	}
 
 	public MessageExtendedAttack(int entity) {
-		this.entity=entity;
+		this.entity = entity;
 	}
 
 	@Override

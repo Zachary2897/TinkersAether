@@ -22,7 +22,7 @@ public class Skyrooted extends TATrait {
 	@Override
 	public void afterBlockBreak(ItemStack tool, World world, IBlockState state, BlockPos pos, EntityLivingBase entity, boolean wasEffective) {
 		if (entity instanceof EntityPlayer) {
-			if (tool.getDestroySpeed(world.getBlockState(pos)) > 1.0f || ForgeHooks.isToolEffective(world, pos, tool)) {
+			if (tool.getDestroySpeed(world.getBlockState(pos)) > 1.0F || ForgeHooks.isToolEffective(world, pos, tool)) {
 				if (state.getProperties().containsKey(PropertyBool.create(Aether.doubleDropNotifier()))) {
 					boolean dropDouble = state.getValue(PropertyBool.create(Aether.doubleDropNotifier())).equals(true);
 					if (dropDouble && !world.isRemote) {

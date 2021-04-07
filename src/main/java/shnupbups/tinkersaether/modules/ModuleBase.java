@@ -77,11 +77,11 @@ public class ModuleBase {
 
 		if (TAConfig.skyroot) {
 			TinkerRegistry.addMaterialStats(skyroot,
-					new HeadMaterialStats(40, 2.10f, 2.00f, STONE),
-					new HandleMaterialStats(1.10f, 30),
+					new HeadMaterialStats(40, 2.10F, 2.00F, STONE),
+					new HandleMaterialStats(1.10F, 30),
 					new ExtraMaterialStats(20),
-					new BowMaterialStats(1.05f, 1.05f, 0.05f),
-					new ArrowShaftMaterialStats(1.05f, 0));
+					new BowMaterialStats(1.05F, 1.05F, 0.05F),
+					new ArrowShaftMaterialStats(1.05F, 0));
 			skyroot.setCraftable(true).setCastable(false);
 			skyroot.addItem("stickSkyroot", 1, Material.VALUE_Shard);
 			skyroot.addItem("plankSkyroot", 1, Material.VALUE_Ingot);
@@ -95,8 +95,8 @@ public class ModuleBase {
 
 		if (TAConfig.holystone) {
 			TinkerRegistry.addMaterialStats(holystone,
-					new HeadMaterialStats(130, 4.10f, 3.00f, IRON),
-					new HandleMaterialStats(0.50f, -50),
+					new HeadMaterialStats(130, 4.10F, 3.00F, IRON),
+					new HandleMaterialStats(0.50F, -50),
 					new ExtraMaterialStats(25),
 					TinkersAether.plzNo);
 			holystone.setCraftable(true).setCastable(false);
@@ -110,8 +110,8 @@ public class ModuleBase {
 
 		if (TAConfig.zanite) {
 			TinkerRegistry.addMaterialStats(zanite,
-					new HeadMaterialStats(210, 2.00f, 4.00f, DIAMOND),
-					new HandleMaterialStats(0.9f, 65),
+					new HeadMaterialStats(210, 2.00F, 4.00F, DIAMOND),
+					new HandleMaterialStats(0.9F, 65),
 					new ExtraMaterialStats(50),
 					TinkersAether.plzNo);
 			zanite.setCraftable(true).setCastable(false);
@@ -127,8 +127,8 @@ public class ModuleBase {
 
 		if (TAConfig.gravitite) {
 			TinkerRegistry.addMaterialStats(gravitite,
-					new HeadMaterialStats(950, 7.50f, 5.00f, OBSIDIAN),
-					new HandleMaterialStats(0.9f, 90),
+					new HeadMaterialStats(950, 7.50F, 5.00F, OBSIDIAN),
+					new HandleMaterialStats(0.9F, 90),
 					new ExtraMaterialStats(90),
 					TinkersAether.plzNo);
 			gravitite.setCraftable(false).setCastable(true);
@@ -143,8 +143,8 @@ public class ModuleBase {
 
 		if (TAConfig.goldenAmber) {
 			TinkerRegistry.addMaterialStats(goldenAmber,
-					new HeadMaterialStats(300, 1.50f, 7.20f, STONE),
-					new HandleMaterialStats(0.7f, 40),
+					new HeadMaterialStats(300, 1.50F, 7.20F, STONE),
+					new HandleMaterialStats(0.7F, 40),
 					new ExtraMaterialStats(30),
 					TinkersAether.plzNo);
 			goldenAmber.setCraftable(true).setCastable(false);
@@ -156,8 +156,8 @@ public class ModuleBase {
 
 		if (TAConfig.valkyrie) {
 			TinkerRegistry.addMaterialStats(valkyrie,
-					new HeadMaterialStats(1000, 8.0f, 6.50f, COBALT),
-					new HandleMaterialStats(1.0f, 80),
+					new HeadMaterialStats(1000, 8.0F, 6.50F, COBALT),
+					new HandleMaterialStats(1.0F, 80),
 					new ExtraMaterialStats(70),
 					TinkersAether.plzNo);
 			valkyrie.setCraftable(false).setCastable(true);
@@ -176,10 +176,10 @@ public class ModuleBase {
 
 		if (TAConfig.swet) {
 			TinkerRegistry.addMaterialStats(swet,
-					new HeadMaterialStats(1100, 4.5f, 2.0f, STONE),
-					new HandleMaterialStats(0.7f, -100),
+					new HeadMaterialStats(1100, 4.5F, 2.0F, STONE),
+					new HandleMaterialStats(0.7F, -100),
 					new ExtraMaterialStats(360),
-					new BowMaterialStats(1.0f, 1.5f, 0.5f));
+					new BowMaterialStats(1.0F, 1.5F, 0.5F));
 			swet.setCraftable(true).setCastable(false);
 			swet.addItem("slimecrystalSwet", 1, Material.VALUE_Ingot);
 			swet.addItem(swetCrystal, 1, Material.VALUE_Ingot);
@@ -190,8 +190,8 @@ public class ModuleBase {
 
 		if (TAConfig.candyCane) {
 			TinkerRegistry.addMaterialStats(candyCane,
-					new HeadMaterialStats(250, 2.5f, 5.0f, STONE),
-					new HandleMaterialStats(1.2f, -120),
+					new HeadMaterialStats(250, 2.5F, 5.0F, STONE),
+					new HandleMaterialStats(1.2F, -120),
 					new ExtraMaterialStats(120),
 					TinkersAether.plzNo);
 			candyCane.setCraftable(true).setCastable(false);
@@ -204,8 +204,8 @@ public class ModuleBase {
 
 		if (TAConfig.aercloudCold) {
 			TinkerRegistry.addMaterialStats(aercloudCold,
-					new HeadMaterialStats(2000, 0.5f, 0.0f, STONE),
-					new HandleMaterialStats(0.2f, -500),
+					new HeadMaterialStats(2000, 0.5F, 0.0F, STONE),
+					new HandleMaterialStats(0.2F, -500),
 					new ExtraMaterialStats(0),
 					TinkersAether.plzNo);
 			aercloudCold.setCraftable(true).setCastable(false);
@@ -217,8 +217,8 @@ public class ModuleBase {
 
 		if (TAConfig.aercloudBlue) {
 			TinkerRegistry.addMaterialStats(aercloudBlue,
-					new HeadMaterialStats(2000, 0.5f, 0.0f, STONE),
-					new HandleMaterialStats(0.2f, -500),
+					new HeadMaterialStats(2000, 0.5F, 0.0F, STONE),
+					new HandleMaterialStats(0.2F, -500),
 					new ExtraMaterialStats(0),
 					TinkersAether.plzNo);
 			aercloudBlue.setCraftable(true).setCastable(false);
@@ -232,8 +232,8 @@ public class ModuleBase {
 
 		if (TAConfig.aercloudGold) {
 			TinkerRegistry.addMaterialStats(aercloudGold,
-					new HeadMaterialStats(2500, 1.0f, 0.1f, STONE),
-					new HandleMaterialStats(0.25f, -400),
+					new HeadMaterialStats(2500, 1.0F, 0.1F, STONE),
+					new HandleMaterialStats(0.25F, -400),
 					new ExtraMaterialStats(20),
 					TinkersAether.plzNo);
 			aercloudGold.setCraftable(true).setCastable(false);
@@ -245,8 +245,8 @@ public class ModuleBase {
 
 		if (TAConfig.icestone) {
 			TinkerRegistry.addMaterialStats(icestone,
-					new HeadMaterialStats(250, 4.20f, 3.50f, IRON),
-					new HandleMaterialStats(0.50f, -20),
+					new HeadMaterialStats(250, 4.20F, 3.50F, IRON),
+					new HandleMaterialStats(0.50F, -20),
 					new ExtraMaterialStats(40),
 					TinkersAether.plzNo);
 			icestone.setCraftable(true).setCastable(false);
@@ -257,7 +257,7 @@ public class ModuleBase {
 		}
 
 		if (TAConfig.skyrootLeaf) {
-			TinkerRegistry.addMaterialStats(skyrootLeaf, new FletchingMaterialStats(0.5f, 1.6f));
+			TinkerRegistry.addMaterialStats(skyrootLeaf, new FletchingMaterialStats(0.5F, 1.6F));
 			skyrootLeaf.setCraftable(true).setCastable(false);
 			skyrootLeaf.addItem("treeLeavesSkyroot", 1, Material.VALUE_Shard);
 			MaterialIntegration skyrootLeafMi = new MaterialIntegration(skyrootLeaf).setRepresentativeItem("treeLeavesSkyroot");
@@ -265,7 +265,7 @@ public class ModuleBase {
 		}
 
 		if (TAConfig.goldenOakLeaf) {
-			TinkerRegistry.addMaterialStats(goldenOakLeaf, new FletchingMaterialStats(0.7f, 1.7f));
+			TinkerRegistry.addMaterialStats(goldenOakLeaf, new FletchingMaterialStats(0.7F, 1.7F));
 			goldenOakLeaf.setCraftable(true).setCastable(false);
 			goldenOakLeaf.addItem("treeLeavesGoldenOak", 1, Material.VALUE_Shard);
 			MaterialIntegration goldenOakLeafMi = new MaterialIntegration(goldenOakLeaf).setRepresentativeItem("treeLeavesGoldenOak");
@@ -273,7 +273,7 @@ public class ModuleBase {
 		}
 
 		if (TAConfig.crystalLeaf) {
-			TinkerRegistry.addMaterialStats(crystalLeaf, new FletchingMaterialStats(0.8f, 2f));
+			TinkerRegistry.addMaterialStats(crystalLeaf, new FletchingMaterialStats(0.8F, 2F));
 			crystalLeaf.setCraftable(true).setCastable(false);
 			crystalLeaf.addItem("treeLeavesCrystal", 1, Material.VALUE_Shard);
 			MaterialIntegration crystalLeafMi = new MaterialIntegration(crystalLeaf).setRepresentativeItem("treeLeavesCrystal");
@@ -281,7 +281,7 @@ public class ModuleBase {
 		}
 
 		if (TAConfig.holidayLeaf) {
-			TinkerRegistry.addMaterialStats(holidayLeaf, new FletchingMaterialStats(0.9f, 1.8f));
+			TinkerRegistry.addMaterialStats(holidayLeaf, new FletchingMaterialStats(0.9F, 1.8F));
 			holidayLeaf.setCraftable(true).setCastable(false);
 			holidayLeaf.addItem("treeLeavesHoliday", 1, Material.VALUE_Shard);
 			MaterialIntegration holidayLeafMi = new MaterialIntegration(holidayLeaf).setRepresentativeItem("treeLeavesHoliday");
@@ -289,7 +289,7 @@ public class ModuleBase {
 		}
 
 		if (TAConfig.goldenFeather) {
-			TinkerRegistry.addMaterialStats(goldenFeather, new FletchingMaterialStats(1.0f, 2f));
+			TinkerRegistry.addMaterialStats(goldenFeather, new FletchingMaterialStats(1.0F, 2F));
 			goldenFeather.setCraftable(true).setCastable(false);
 			goldenFeather.addItem("featherGold", 1, Material.VALUE_Ingot);
 			MaterialIntegration goldenFeatherMi = new MaterialIntegration(goldenFeather).setRepresentativeItem("featherGold");
@@ -367,7 +367,7 @@ public class ModuleBase {
 		IForgeRegistry<Block> registry = event.getRegistry();
 		if (TAConfig.valkyrie) {
 			valkyrieBlock.setHarvestLevel("pickaxe", 3);
-			valkyrieBlock.setHardness(4.0f);
+			valkyrieBlock.setHardness(4.0F);
 			registry.register(valkyrieBlock);
 		}
 		TinkersAether.logger.info("Base Module - Blocks Registered");
@@ -376,7 +376,7 @@ public class ModuleBase {
 	@SubscribeEvent
 	public void onRegisterEnchantmentEvent(RegistryEvent.Register<AetherEnchantment> event) {
 		IForgeRegistry<AetherEnchantment> registry = event.getRegistry();
-		if (TAConfig.valkyrie&&TAConfig.valkyrieMedalEnchant) {
+		if (TAConfig.valkyrie && TAConfig.valkyrieMedalEnchant) {
 			registry.register(new AetherEnchantment(new ItemStack(ItemsAether.victory_medal), new ItemStack(valkyrieNugget), 250));
 		}
 		TinkersAether.logger.info("Base Module - Enchantment Recipes Registered");
@@ -384,7 +384,7 @@ public class ModuleBase {
 
 	@SubscribeEvent
 	public void onLootTableLoad(LootTableLoadEvent event) {
-		if (TAConfig.valkyrie&&TAConfig.valkyrieDungeonChest) {
+		if (TAConfig.valkyrie && TAConfig.valkyrieDungeonChest) {
 			if (event.getName().toString().equals("aether_legacy:chests/silver_dungeon_chest")) {
 				LootEntry entry = new LootEntryTable(new ResourceLocation(TinkersAether.modid, "inject/silver_dungeon_chest"), 100, 10, new LootCondition[0], "ta_inject_entry");
 				event.getTable().addPool(new LootPool(new LootEntry[]{entry}, new LootCondition[0], new RandomValueRange(1), new RandomValueRange(0, 1), "ta_inject_pool"));

@@ -43,8 +43,8 @@ public class ToolDartShooter extends BowCore {
 
 	@Override
 	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-		// has to be done in onUpdate because onTickUsing is too early and gets overwritten. bleh.
-		preventSlowDown(entityIn, 1.0f);
+		// has to be done in onUpdate because onTickUsing is too early and gets overwritten
+		preventSlowDown(entityIn, 1.0F);
 
 		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
 	}
@@ -62,17 +62,17 @@ public class ToolDartShooter extends BowCore {
 
 	@Override
 	public float baseProjectileDamage() {
-		return 1.0f;
+		return 1.0F;
 	}
 
 	@Override
 	public float projectileDamageModifier() {
-		return 1.0f;
+		return 1.0F;
 	}
 
 	@Override
 	public void playShootSound(float power, World world, EntityPlayer entityPlayer) {
-		world.playSound(null, entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.NEUTRAL, 1.0F, 0.5f + itemRand.nextFloat() * 0.1f);
+		world.playSound(null, entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.NEUTRAL, 1.0F, 0.5F + itemRand.nextFloat() * 0.1F);
 	}
 
 	@Override
@@ -88,14 +88,14 @@ public class ToolDartShooter extends BowCore {
 		data.extra(mouthpiece);
 		data.handle(handle);
 
-		data.bonusDamage *= 0.5f;
+		data.bonusDamage *= 0.5F;
 
 		return data;
 	}
 
 	@Override
 	public float damagePotential() {
-		return 0.2f;
+		return 0.2F;
 	}
 
 	@Override
@@ -140,10 +140,10 @@ public class ToolDartShooter extends BowCore {
 	public EntityArrow getProjectileEntity(ItemStack ammo, ItemStack bow, World world, EntityPlayer player, float power, float inaccuracy, float progress, boolean usedAmmo) {
 		if (ammo.getItem() == ItemsAether.dart) {
 			EntityArrow projectile;
-			if (ammo.getMetadata()==0) {
+			if (ammo.getMetadata() == 0) {
 				projectile = new EntityDartGolden(world, player);
 			}
-			else if (ammo.getMetadata()==1) {
+			else if (ammo.getMetadata() == 1) {
 				projectile = new EntityDartPoison(world, player);
 			}
 			else {

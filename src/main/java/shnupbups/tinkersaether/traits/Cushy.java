@@ -21,6 +21,6 @@ public class Cushy extends TATrait {
 
 	@Override
 	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
-		return newDamage*0.1f;
+		return newDamage * 0.1F;
 	}
 }

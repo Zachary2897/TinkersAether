@@ -29,7 +29,6 @@ public class Reach extends TATrait {
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	//Made a mistake in previous versions... this should fix it!
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onPlayerJoin(EntityJoinWorldEvent event) {
@@ -71,7 +70,7 @@ public class Reach extends TATrait {
 				if (!ent.canBeCollidedWith()) {
 					continue;
 				}
-				Vec3d vec = new Vec3d(ent.posX - player.posX, ent.getEntityBoundingBox().minY + ent.height / 2f - player.posY - player.getEyeHeight(), ent.posZ - player.posZ);
+				Vec3d vec = new Vec3d(ent.posX - player.posX, ent.getEntityBoundingBox().minY + ent.height / 2F - player.posY - player.getEyeHeight(), ent.posZ - player.posZ);
 				double len = vec.length();
 				if (len > 10.0F) {
 					continue;

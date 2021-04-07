@@ -13,8 +13,8 @@ public class FluidHelper {
 		fluid.setTemperature(temperature);
 		FluidRegistry.registerFluid(fluid);
 		BlockMolten blockFluid = new BlockMolten(fluid);
-		blockFluid.setTranslationKey("molten_"+fluid.getName());
-		blockFluid.setRegistryName("molten_"+fluid.getName());
+		blockFluid.setTranslationKey("molten_" + fluid.getName());
+		blockFluid.setRegistryName("molten_" + fluid.getName());
 		ForgeRegistries.BLOCKS.register(blockFluid);
 		FluidRegistry.addBucketForFluid(fluid);
 		TinkersAether.proxy.registerFluidModels(fluid);

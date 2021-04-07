@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import slimeknights.tconstruct.library.utils.ToolHelper;
 
-public class Antigrav extends TATrait{
+public class Antigrav extends TATrait {
 	public static final Antigrav antigrav = new Antigrav();
 
 	public Antigrav() {
@@ -30,7 +30,7 @@ public class Antigrav extends TATrait{
 				|| !isToolWithTrait(heldItem)
 				|| ToolHelper.getCurrentDurability(event.getItemStack()) < 4)
 			return;
-		if ((heldItem.getDestroySpeed(world.getBlockState(pos)) > 1.0f || ForgeHooks.isToolEffective(world, pos, heldItem)) && world.isAirBlock(pos.up())) {
+		if ((heldItem.getDestroySpeed(world.getBlockState(pos)) > 1.0F || ForgeHooks.isToolEffective(world, pos, heldItem)) && world.isAirBlock(pos.up())) {
 			if (world.getTileEntity(pos) != null || world.getBlockState(pos).getBlockHardness(world, pos) == -1.0F) {
 				return;
 			}
