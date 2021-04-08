@@ -103,6 +103,10 @@ public class TAConfig extends Configuration {
 	@Config.Comment("Whether Valkyrie Metal (if enabled) can be created by enchanting Victory Medals.")
 	@Config.RequiresMcRestart
 	public static boolean valkyrieMedalEnchant = true;
+	
+	@Config.Comment("Whether the Luck modifier should affect drops harvested using the Refrigeration trait.")
+	@Config.RequiresMcRestart
+	public static boolean luckAffectsRefrigeration = true;
 
 	@Mod.EventBusSubscriber(modid = TinkersAether.modid)
 	private static class EventHandler {

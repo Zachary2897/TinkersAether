@@ -6,7 +6,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
-import slimeknights.tconstruct.common.config.Config;
+import shnupbups.tinkersaether.config.TAConfig;
 import slimeknights.tconstruct.library.modifiers.IToolMod;
 import slimeknights.tconstruct.library.utils.ToolHelper;
 import slimeknights.tconstruct.tools.TinkerModifiers;
@@ -39,12 +39,12 @@ public class Refrigeration extends TATrait {
 			ListIterator<ItemStack> dropsList = event.getDrops().listIterator();
 			while (dropsList.hasNext()) {
 				ItemStack drop = dropsList.next();
-				ItemStack frozen = AetherAPI.getInstance().getFreezable(drop).getOutput();
-				if (!frozen.isEmpty()) {
+				if (AetherAPI.getInstance().hasFreezable(drop)) {
+					ItemStack frozen = AetherAPI.getInstance().getFreezable(drop).getOutput();
 					frozen = frozen.copy();
 					frozen.setCount(drop.getCount());
 					int fortune = EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, tool);
-					if (Config.autosmeltlapis && fortune > 0) {
+					if (TAConfig.luckAffectsRefrigeration && fortune > 0) {
 						frozen.setCount(frozen.getCount() * random.nextInt(fortune + 1) + 1);
 					}
 					dropsList.set(frozen);
