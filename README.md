@@ -22,7 +22,7 @@ Each of these that have corresponding tools in The Aether have traits somewhat e
 
 Current fletching materials include:
 <ul>
-  <li>Skyroot Leaf (as of 1.2.0</li>
+  <li>Skyroot Leaf (as of 1.2.0)</li>
   <li>Golden Oak Leaf (as of 1.2.0)</li>
   <li>Crystal Leaf (as of 1.2.0)</li>
   <li>Holiday Leaf (as of 1.2.0)</li>
