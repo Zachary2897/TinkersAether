@@ -1,13 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven { url = "https://jitpack.io" }
         maven { url = "https://maven.minecraftforge.net" }
     }
     dependencies {
-        classpath('com.github.DStrand1:ForgeGradle:FG_2.3-SNAPSHOT') {
-            changing = true
-        }
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
 
@@ -19,12 +16,8 @@ group = "shnupbups.tinkersaether" // http://maven.apache.org/guides/mini/guide-n
 archivesBaseName = "tinkersaether"
 
 repositories {
-    maven {
-        url = "https://dvs1.progwml6.com/files/maven"
-    }
-    maven {
-        url = "https://maven.covers1624.net"
-    }
+    maven { url = "https://dvs1.progwml6.com/files/maven" }
+    maven { url = "https://maven.covers1624.net" }
 }
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
